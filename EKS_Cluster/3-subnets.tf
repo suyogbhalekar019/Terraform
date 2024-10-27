@@ -5,8 +5,8 @@ resource "aws_subnet" "private-us-east-1a" {
 
   tags = {
     "Name"                            = "eks-private-us-east-1a"
-    "kubernetes.io/role/internal-elb" = "1"
-    "kubernetes.io/cluster/demo"      = "shared"
+    "kubernetes.io/role/internal-elb" = "1"          # discover the subnets over private LB
+    "kubernetes.io/cluster/demo"      = "shared"     # if you want to share with other k8 clusters
   }
 }
 
