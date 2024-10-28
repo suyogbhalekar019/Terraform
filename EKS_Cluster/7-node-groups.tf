@@ -38,11 +38,11 @@ resource "aws_eks_node_group" "private-nodes" {
     aws_subnet.private-us-east-1b.id
   ]
 
-  ami_type = "AL3_x86_64"
-  capacity_type  = "ON_DEMAND"
-  disk_size = 20
+  ami_type             = "AL2_x86_64"
+  capacity_type        = "ON_DEMAND"
+  disk_size            = 20
   force_update_version = false
-  instance_types = ["t3.small"]
+  instance_types       = ["t3.small"]
 
   scaling_config {
     desired_size = 2
