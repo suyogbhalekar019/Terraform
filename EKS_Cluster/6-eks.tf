@@ -23,20 +23,20 @@ resource "aws_iam_role_policy_attachment" "demo-AmazonEKSClusterPolicy" {
 }
 
 variable "cluster_name" {
-  default = "eks-cluster-demo"
-  type = string
+  default     = "eks-cluster-demo"
+  type        = string
   description = "AWS EKS CLuster Name"
-  nullable = false
+  nullable    = false
 }
 
 resource "aws_eks_cluster" "demo" {
   name     = var.cluster_name
   role_arn = aws_iam_role.demo.arn
-  version = "1.30"
+  version  = "1.30"
 
   vpc_config {
     endpoint_private_access = false
-    endpoint_public_access = true
+    endpoint_public_access  = true
     subnet_ids = [
       aws_subnet.private-us-east-1a.id,
       aws_subnet.private-us-east-1b.id,
