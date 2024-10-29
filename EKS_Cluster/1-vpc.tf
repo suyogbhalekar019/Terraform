@@ -14,6 +14,6 @@ resource "aws_vpc" "main" {
 
   tags = {
     "kubernetes.io/cluster/${local.cluster_name}" = "shared"
-    Name = "eks-vpc"
+    "Name" = "eks-vpc"
   }
 }
