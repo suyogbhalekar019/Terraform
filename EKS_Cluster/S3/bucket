@@ -6,6 +6,10 @@ resource "aws_s3_bucket" "backend_bucket" {
   bucket = "my-backend-bucket"      # Replace with a unique bucket name
   acl    = "private"                # Access control list (default is private)
 
+versioning {
+    enabled = true                  # Enable versioning to retain state history
+  }
+
   tags = {
     Name        = "S3_backend"
     Environment = "Test"
