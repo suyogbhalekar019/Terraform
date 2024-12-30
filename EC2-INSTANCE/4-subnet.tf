@@ -7,6 +7,6 @@ resource "aws_subnet" "public" {
   availability_zone = element(["us-east-1a", "us-east-1b"], count.index)
 
   tags = {
-    Name = "public-subnet-${count.index + 1}"
+    Name = "EC2-public-subnet-${count.index + 1}"
   }
 }
