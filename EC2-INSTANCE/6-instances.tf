@@ -10,6 +10,6 @@ resource "aws_instance" "main" {
   ]
 
   tags = {
-    Name = "Instance-${count.index + 1}"
+    Name = "var.hostnames[count.index]"
   }
 }
