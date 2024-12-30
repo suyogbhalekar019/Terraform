@@ -9,7 +9,7 @@ resource "aws_route_table" "main" {
   }
 
   tags = {
-    Name = "main-route-table"
+    Name = "EC2-main-route-table"
   }
 }
 
