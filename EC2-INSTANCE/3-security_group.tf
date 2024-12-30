@@ -25,6 +25,6 @@ resource "aws_security_group" "main" {
   }
 
   tags = {
-    Name = "main-security-group"
+    Name = "EC2-security-group"
   }
 }
